@@ -1,7 +1,7 @@
 {
   "version": "8.1.0",
   "builds": {
-    "4c1a66f5090672d2d9c2ce694f73e20f": {
+    "ifp": {
       "browsers": ["ie >= 11"],
       "components": {
         "attributes": {
@@ -31,18 +31,52 @@
           "next_all": false,
           "next_until": false
         }
-      },
-      "paths": {
-        "tokens": {
-          "bundle": "cash"
+      }
+    },
+    "only-selection-and-reflection": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "core": {
+          "parse_html": false
         },
-        "output": {
-          "javascript": {
-            "unminified": "[dist]/[bundle].js",
-            "minified": "[dist]/[bundle].min.js"
-          }
+        "data": false,
+        "dimensions": false,
+        "effects": false,
+        "events": false,
+        "extra": false,
+        "forms": false,
+        "offset": false,
+        "manipulation": false
+      }
+    },
+    "no-forms": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "forms": false
+      }
+    },
+    "no-css": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "css": {
+          "css": false
         }
       }
-    }    
+    },
+    "no-css-or-effects": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "css": {
+          "css": false
+        },
+        "effects": false
+      }
+    },
+    "no-dimensions": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "dimensions": false
+      }
+    }
   }
 }

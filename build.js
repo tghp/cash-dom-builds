@@ -80,35 +80,41 @@ const conf = rc('cash');
 
     const cwd = `${path.resolve(path.dirname(''))}/${cashPath}`;
 
-    // Run build tasks: clean
-    console.log('Ruin build task: clean');
-    await new Promise((resolve, reject) => {
-      npmRun.exec('npm run clean', { cwd }, (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
-        }
+    try {
+      // Run build tasks: clean
+      console.log('Ruin build task: clean');
+      await new Promise((resolve, reject) => {
+        npmRun.exec('npm run clean', { cwd }, (err, stdout, stderr) => {
+          if (err) {
+            reject(err);
+          }
 
-        resolve();
-      })
-    });
+          resolve();
+        })
+      });
 
-    console.log('Ruin build task: build:prod');
-    // Run build tasks: build for production
-    await new Promise((resolve, reject) => {
-      npmRun.exec('npm run build:prod', { cwd }, (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
-        }
+      console.log('Ruin build task: build:prod');
+      // Run build tasks: build for production
+      await new Promise((resolve, reject) => {
+        npmRun.exec('npm run build:prod', { cwd }, (err, stdout, stderr) => {
+          if (err) {
+            reject(err);
+          }
 
-        if (stdout.indexOf('[Error]') !== -1) {
-          console.log(stdout);
-          reject('Failed');
-        }
-        
-        resolve();
-      })
-    });
-
+          if (stdout.indexOf('[Error]') !== -1) {
+            console.log(stdout);
+            reject('Failed');
+          }
+          
+          resolve();
+        })
+      });
+    } catch (e) {
+      console.log('ERROR');
+      console.log(e);
+      process.exit(1);
+    }
+ 
     const buildPath = `${path.resolve(path.dirname(''))}/${cashPath}/dist`;
 
     console.log('Copying build to dist');

@@ -1,11 +1,14 @@
 {
   "name": "@tghp/cash-dom-builds",
-  "version": "2021.12.3",
+  "version": "2021.12.6",
   "description": "Custom cash-dom partial builds",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist/*",
+    "release": "npm run build && npm publish --access public",
+    "prerelease": "npm run clean",
     "build": "node build.js",
-    "prebuildOnly": "rm -rf dist/*"
+    "prebuild": "npm run clean"
   },
   "repository": {
     "type": "git",
