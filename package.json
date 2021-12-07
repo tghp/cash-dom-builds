@@ -1,0 +1,30 @@
+{
+  "name": "@tghp/cash-dom-builds",
+  "version": "2021.12.1",
+  "description": "Custom cash-dom partial builds",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "prebuildOnly": "rm -rf dist/*"
+  },
+  "author": "TGHP",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "degit": "^2.8.4",
+    "fs-extra-promise": "^1.0.1",
+    "npm-run": "^5.0.1",
+    "npminstall": "^5.3.1",
+    "rc": "^1.2.8"
+  },
+  "files": [
+    "README.md",
+    ".cashrc",
+    "dist"
+  ],
+  "keywords": [
+    "cash-dom",
+    "partial",
+    "partial-build"
+  ]
+}

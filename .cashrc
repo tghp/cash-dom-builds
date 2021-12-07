@@ -1,0 +1,48 @@
+{
+  "version": "8.1.0",
+  "builds": {
+    "4c1a66f5090672d2d9c2ce694f73e20f": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "attributes": {
+          "prop": false,
+          "remove_prop": false
+        },
+        "collection": {
+          "add": false,
+          "slice": false
+        },
+        "core": {
+          "parse_html": false
+        },
+        "extra": {
+          "shorthands": false
+        },
+        "effects": false,
+        "css": true,
+        "data": false,
+        "dimensions": false,
+        "events": true,
+        "forms": false,
+        "manipulation": false,
+        "offset": false,
+        "traversal": {
+          "contents": false,
+          "next_all": false,
+          "next_until": false
+        }
+      },
+      "paths": {
+        "tokens": {
+          "bundle": "cash"
+        },
+        "output": {
+          "javascript": {
+            "unminified": "[dist]/[bundle].js",
+            "minified": "[dist]/[bundle].min.js"
+          }
+        }
+      }
+    }    
+  }
+}
