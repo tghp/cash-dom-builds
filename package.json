@@ -1,11 +1,15 @@
 {
   "name": "@tghp/cash-dom-builds",
-  "version": "2021.12.2",
+  "version": "2021.12.3",
   "description": "Custom cash-dom partial builds",
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
     "prebuildOnly": "rm -rf dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tghp/cash-dom-builds"
   },
   "author": "TGHP",
   "license": "ISC",
@@ -20,7 +24,8 @@
   "files": [
     "README.md",
     ".cashrc",
-    "dist"
+    "dist",
+    "resources"
   ],
   "keywords": [
     "cash-dom",
