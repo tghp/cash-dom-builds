@@ -42,7 +42,20 @@ const conf = rc('cash');
   for (const build in conf.builds) {
     console.log(`Build ${build}`);
 
-    const paccoConfig = conf.builds[build];
+    const paccoConfig = {
+      "paths": {
+        "tokens": {
+          "bundle": "cash"
+        },
+        "output": {
+          "javascript": {
+            "unminified": "[dist]/[bundle].js",
+            "minified": "[dist]/[bundle].min.js"
+          }
+        }
+      },
+      ...conf.builds[build]
+    };
     const paccoConfigPath = `${cashPath}/pacco.json`;
     const paccoRefConfigPath = `${cashPath}/pacco.json.ref`;
     const distPath = `dist/${build}`;
