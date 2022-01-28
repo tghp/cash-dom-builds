@@ -33,6 +33,47 @@
         }
       }
     },
+    "ftx": {
+      "browsers": ["ie >= 11"],
+      "components": {
+        "attributes": {
+          "prop": false,
+          "remove_prop": false,
+          "toglge_class": false
+        },
+        "collection": {
+          "add": false,
+          "eq": false,
+          "first": false,
+          "index": false,
+          "last": false,
+          "map": false,
+          "slice": false
+        },
+        "core": {
+          "parse_html": false
+        },
+        "extra": {
+          "shorthands": false
+        },
+        "effects": false,
+        "css": true,
+        "data": false,
+        "dimensions": false,
+        "events": {
+          "one": false,
+          "trigger": false
+        },
+        "forms": false,
+        "manipulation": false,
+        "offset": false,
+        "traversal": {
+          "contents": false,
+          "next_all": false,
+          "next_until": false
+        }
+      }
+    },
     "only-selection-and-reflection": {
       "browsers": ["ie >= 11"],
       "components": {

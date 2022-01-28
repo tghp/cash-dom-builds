@@ -1,6 +1,6 @@
 {
   "name": "@tghp/cash-dom-builds",
-  "version": "2021.12.6",
+  "version": "2022.01.28",
   "description": "Custom cash-dom partial builds",
   "main": "index.js",
   "scripts": {
